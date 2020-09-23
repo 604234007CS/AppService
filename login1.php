@@ -1,3 +1,4 @@
+
 <?php
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json; charset=UTF-8");
@@ -10,11 +11,10 @@
     // $user = $getdata->user;
     // $pass = $getdata->pass;
 
-
     $user = $_POST['user'];
     $pass = $_POST['pass'];
 
-    $sql = "SELECT * FROM participants WHERE Username = '$user' AND Password = '$pass' ";
+    $sql = "SELECT * FROM lecturer WHERE Username = '$user' AND Password = '$pass' ";
     $result = mysqli_query($con, $sql);
 
     $numrow = mysqli_num_rows($result);
