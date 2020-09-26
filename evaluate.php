@@ -1,7 +1,7 @@
 <?php
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json; charset=UTF-8");
-    header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+    // header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
     include('config.php');
 
     // $getT_ID   = $_POST['T_ID ']; 
@@ -31,7 +31,7 @@
     // $getApplied = '3';
     // $getKnowledgeGained  = '5'; 
     // $getTransferable = '3'; 
-    // $getSuggestion = 'muna';
+    // $getSuggestion = 'veeeeeee';
     
     // T_ID, L_ID,   ' $getT_ID', '$getL_ID',
 
@@ -52,7 +52,7 @@
     }else{
         $callback = array(
             'status' => 404
-            ,'msg' => 'ลงทะเบียนไม่สำเร็จ'
+            ,'msg' => 'ไม่สำเร็จ'
         );
     }
 
