@@ -3,11 +3,9 @@
  header("Access-Control-Allow-Origin: *");
  header("Content-Type: application/json; charset=UTF-8");
 
-
-//  $sql = "SELECT * FROM training";
-$sql = 'SELECT *
-FROM training,lecturer
-WHERE training.L_ID =  lecturer.L_ID';
+//  $id = $_POST['id'];
+ $sql = "SELECT evaluate.Applied ,COUNT(evaluate.Applied ) as num FROM evaluate
+ GROUP BY evaluate.Applied ";
  $result = mysqli_query($con, $sql);
  
  $arr = array();

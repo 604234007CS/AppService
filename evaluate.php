@@ -37,10 +37,14 @@
 
 
 
-    // INSERT INTO `evaluate`(`E_ID`, `T_ID`, `L_ID`, `Clarity`, `Ability`, `ContentAssociation`, `Completeness`, `BeforeTraining`, `AfterTraining`, `Applied`, `KnowledgeGained`, `Transferable`, `Suggestion`) 
-    $sql = "INSERT INTO evaluate( Clarity, Ability , ContentAssociation, Completeness , BeforeTraining, AfterTraining, Applied , KnowledgeGained , Transferable, Suggestion )
-                        VALUES ('$getClarity', '$getAbility ', '$getContentAssociation', '$getCompleteness ', '$getBeforeTraining',
-                                ' $getAfterTraining', ' $getApplied', ' $getKnowledgeGained', ' $getTransferable', '$getSuggestion')";
+   
+   
+    $sql = "INSERT INTO evaluate( Clarity, Ability , ContentAssociation, Completeness , BeforeTraining, 
+                        AfterTraining, Applied , KnowledgeGained , Transferable, Suggestion )
+                        VALUES ('$getClarity', '$getAbility ', '$getContentAssociation', '$getCompleteness '
+                                , '$getBeforeTraining',' $getAfterTraining', ' $getApplied', 
+                                ' $getKnowledgeGained', ' $getTransferable', '$getSuggestion')
+                                ";
     $result = mysqli_query($con, $sql);
     
     if($result){

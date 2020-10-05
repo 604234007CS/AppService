@@ -6,15 +6,15 @@
 
     // $getT_ID  =  '1'; 
     // $getP_ID  =  '2';
-    // $getDir_Name   = 'นาย';
-    // $getP_Name      = 'นัสรี';
-    // $getTell      =  '0986751234';
+
+
+    $getT_ID   = $_POST['T_ID'];  
+    $getP_ID   =$_POST['P_ID']; 
     
-
-
+    
  
-    $sql = "INSERT INTO register( T_ID, P_ID, Dir_Name, P_Name, Tell  )
-                        VALUES ( '$getT_ID', '$getP_ID','$getDir_Name', '$getP_Name', '$getTell')";
+    $sql = "INSERT INTO register( T_ID, P_ID )
+                        VALUES ( '$getT_ID', '$getP_ID')";
     $result = mysqli_query($con, $sql);
     
     if($result){

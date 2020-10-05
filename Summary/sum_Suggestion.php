@@ -1,13 +1,12 @@
+<!-- ข้อเสนอเเนะ -->
+
 <?php
  include('../config.php');
  header("Access-Control-Allow-Origin: *");
  header("Content-Type: application/json; charset=UTF-8");
 
-
-//  $sql = "SELECT * FROM training";
-$sql = 'SELECT *
-FROM training,lecturer
-WHERE training.L_ID =  lecturer.L_ID';
+//  $id = $_POST['id'];
+ $sql = "SELECT Suggestion FROM evaluate ";
  $result = mysqli_query($con, $sql);
  
  $arr = array();

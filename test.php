@@ -6,12 +6,9 @@
 //  $id = $_POST['id'];
 //  $sql = "SELECT * FROM training where  L_ID ='$id'";
 
-$id = $_POST['id'];
+// $id = $_POST['id'];
 // echo $id;
-$sql = "SELECT participants.P_ID,participants.Dir_Name, participants.P_Name,participants.Tell,register.regis_id 
-        FROM register 
-        INNER JOIN participants ON register.P_ID = participants.P_ID 
-        WHERE T_ID = '$id'";
+$sql = "SELECT * FROM `training` WHERE training.T_ID = '1'";
 
  $result = mysqli_query($con, $sql);
  
