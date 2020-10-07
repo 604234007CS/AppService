@@ -3,8 +3,8 @@
  header("Access-Control-Allow-Origin: *");
  header("Content-Type: application/json; charset=UTF-8");
 
-//  $id = $_POST['id'];
- $sql = "SELECT evaluate.KnowledgeGained,COUNT(evaluate.KnowledgeGained   ) as num FROM evaluate
+ $id = $_GET['id'];
+ $sql = "SELECT evaluate.KnowledgeGained,COUNT(evaluate.KnowledgeGained) as num FROM evaluate WHERE T_ID='".$id."'
  GROUP BY evaluate.KnowledgeGained ";
  $result = mysqli_query($con, $sql);
  

@@ -6,7 +6,7 @@
 
     // $getT_ID   = $_POST['T_ID ']; 
     // $getL_ID   = $_POST['L_ID ']; 
-
+     $Tid = $_POST['T_ID'];
     $getClarity   = $_POST['Clarity']; 
     $getAbility   =$_POST['Ability'];   
     $getContentAssociation = $_POST['ContentAssociation'];  
@@ -39,9 +39,10 @@
 
    
    
-    $sql = "INSERT INTO evaluate( Clarity, Ability , ContentAssociation, Completeness , BeforeTraining, 
+    // $Tid = $_POST['Tid'];
+    $sql = "INSERT INTO evaluate( T_ID, Clarity, Ability , ContentAssociation, Completeness , BeforeTraining, 
                         AfterTraining, Applied , KnowledgeGained , Transferable, Suggestion )
-                        VALUES ('$getClarity', '$getAbility ', '$getContentAssociation', '$getCompleteness '
+                        VALUES ('$Tid','$getClarity', '$getAbility ', '$getContentAssociation', '$getCompleteness '
                                 , '$getBeforeTraining',' $getAfterTraining', ' $getApplied', 
                                 ' $getKnowledgeGained', ' $getTransferable', '$getSuggestion')
                                 ";

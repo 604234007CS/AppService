@@ -4,7 +4,8 @@
  header("Content-Type: application/json; charset=UTF-8");
 
 //  $id = $_POST['id'];
- $sql = "SELECT evaluate.Clarity,COUNT(evaluate.Clarity) as num FROM evaluate
+$id = $_GET['id']; 
+ $sql = "SELECT evaluate.Clarity,COUNT(evaluate.Clarity) as num FROM evaluate WHERE T_ID='".$id."'
  GROUP BY evaluate.Clarity ";
  $result = mysqli_query($con, $sql);
  

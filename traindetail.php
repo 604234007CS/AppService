@@ -20,7 +20,6 @@
         while($row = mysqli_fetch_assoc($result)){
             $arr[] = $row;
         }
-
         echo json_encode($arr);
         mysqli_close($con);
     }else{

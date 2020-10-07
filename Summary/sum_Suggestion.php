@@ -5,8 +5,8 @@
  header("Access-Control-Allow-Origin: *");
  header("Content-Type: application/json; charset=UTF-8");
 
-//  $id = $_POST['id'];
- $sql = "SELECT Suggestion FROM evaluate ";
+ $id = $_GET['id'];
+ $sql = "SELECT Suggestion FROM evaluate WHERE T_ID='".$id."' ";
  $result = mysqli_query($con, $sql);
  
  $arr = array();
