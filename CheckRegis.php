@@ -3,11 +3,13 @@
  header("Access-Control-Allow-Origin: *");
  header("Content-Type: application/json; charset=UTF-8");
 
- $pid = $_POST['pid'];
- $tid = $_POST['tid'];
- echo 'pid';
+ $pid = $_GET['pid'];
+ $tid = $_GET['tid'];
 
- $sql = "SELECT * FROM register WHERE P_ID = '$pid' AND T_ID = '$tid'  ";
+ echo $pid;
+ echo $tid;
+
+ $sql = "SELECT * FROM register WHERE T_ID = '$tid' AND P_ID = '$pid' ";
  $result = mysqli_query($con, $sql);
 
     $numrow = mysqli_num_rows($result);
